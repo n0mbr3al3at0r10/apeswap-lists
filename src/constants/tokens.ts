@@ -1,5 +1,5 @@
 import { ChainId } from '@ape.swap/sdk'
-import { Token } from '../types'
+import { LiquidityDex, Token } from '../types'
 
 const tokens: Record<string, Token> = {
   // BANANA should always be first token for GNANA calculation
@@ -1994,6 +1994,45 @@ const tokens: Record<string, Token> = {
     },
     active: true,
   },
+  quicktest: {
+    symbol: 'QT',
+    address: {
+      [ChainId.MATIC]: '0x5d4bdadC63542eB01835Cd870629b46BF5169f8E',
+    },
+    decimals: {
+      [ChainId.MATIC]: 18,
+    },
+    active: true,
+    liquidityDex: {
+      [ChainId.MATIC]: LiquidityDex.QuickswapV2,
+    },
+  },
+  quick: {
+    symbol: 'Quick',
+    address: {
+      [ChainId.MATIC]: '0xB5C064F955D8e7F38fE0460C556a72987494eE17',
+    },
+    decimals: {
+      [ChainId.MATIC]: 18,
+    },
+    active: true,
+    liquidityDex: {
+      [ChainId.MATIC]: LiquidityDex.Algebra,
+    },
+  },
+  TTT: {
+    symbol: 'TTT',
+    address: {
+      [ChainId.BSC]: '0x699EDc2f863d7AcAc41Bc19E2607823181bC88eE',
+    },
+    decimals: {
+      [ChainId.BSC]: 18,
+    },
+    active: true,
+    liquidityDex: {
+      [ChainId.BSC]: LiquidityDex.PancakeSwapV2,
+    },
+  },
 
   // Test LPs
 
@@ -2018,6 +2057,48 @@ const tokens: Record<string, Token> = {
     },
     active: false,
     lpToken: true,
+  },
+  maticDoubloons: {
+    symbol: 'MATIC-D',
+    address: {
+      [ChainId.MATIC]: '0x68458B8604c81f5390C790F362A53A5168570D7F',
+    },
+    decimals: {
+      [ChainId.MATIC]: 18,
+    },
+    active: true,
+    lpToken: true,
+    liquidityDex: {
+      [ChainId.MATIC]: LiquidityDex.QuickswapV2,
+    },
+  },
+  quickMatic: {
+    symbol: 'aWMATIC-QUICK',
+    address: {
+      [ChainId.MATIC]: '0x7f09bD2801A7b795dF29C273C4afbB0Ff15E2D63',
+    },
+    decimals: {
+      [ChainId.MATIC]: 18,
+    },
+    active: true,
+    lpToken: true,
+    liquidityDex: {
+      [ChainId.MATIC]: LiquidityDex.Algebra,
+    },
+  },
+  pcsBnbUsdt: {
+    symbol: 'BNB-USDT',
+    address: {
+      [ChainId.BSC]: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE',
+    },
+    decimals: {
+      [ChainId.BSC]: 18,
+    },
+    active: false,
+    lpToken: true,
+    liquidityDex: {
+      [ChainId.BSC]: LiquidityDex.PancakeSwapV2,
+    },
   },
 
   // LP Tokens
